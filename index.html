@@ -69,6 +69,19 @@
             background: var(--accent-light);
             transform: scale(1.02);
         }
+
+        /* Sleek custom inputs */
+        .custom-input {
+            background: var(--surface);
+            border: 1px solid var(--card-border);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .custom-input:focus {
+            outline: none;
+            border-color: var(--accent);
+            background: #1c1c1c;
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-[#8B9E7C] selection:text-black">
@@ -145,24 +158,32 @@
         </div>
     </section>
 
-    <section id="apply" class="px-6 py-24 max-w-2xl mx-auto">
-        <div class="text-center mb-10">
+    <section id="apply" class="px-6 py-32 max-w-2xl mx-auto">
+        <div class="text-center mb-12">
             <h2 class="text-4xl font-bold mb-4" data-i18n="formTitle">Apply to the Crew</h2>
-            <p class="text-gray-400 font-light max-w-md mx-auto" data-i18n="formSubtitle">Tell us about your reach and why you're a fit.</p>
+            <p class="text-gray-400 font-light" data-i18n="formSubtitle">Tell us about your reach and why you're a fit.</p>
         </div>
 
-        <div class="w-full rounded-[32px] overflow-hidden border border-white/5 bg-[#141414] shadow-2xl p-2">
-            <iframe 
-                src="https://docs.google.com/forms/d/e/1FAIpQLSfmLFp0uQz03esCIZlLT6nEyAiRaFegXh7hfRybqBnxlwYk7Q/viewform?embedded=true" 
-                width="100%" 
-                height="750" 
-                frameborder="0" 
-                marginheight="0" 
-                marginwidth="0"
-                class="rounded-[24px]">
-                Loading form...
-            </iframe>
-        </div>
+        <form action="https://formbold.com/s/YOUR_UNIQUE_ID_HERE" method="POST" class="space-y-6">
+            <div class="space-y-2">
+                <label class="text-[10px] uppercase tracking-widest text-gray-500 font-semibold ml-1" data-i18n="labelName">Full Name</label>
+                <input type="text" name="name" required placeholder="John Doe" class="custom-input w-full px-5 py-4 rounded-2xl text-base">
+            </div>
+
+            <div class="space-y-2">
+                <label class="text-[10px] uppercase tracking-widest text-gray-500 font-semibold ml-1" data-i18n="labelSocial">Social Media Link</label>
+                <input type="url" name="social" required placeholder="instagram.com/yourhandle" class="custom-input w-full px-5 py-4 rounded-2xl text-base">
+            </div>
+
+            <div class="space-y-2">
+                <label class="text-[10px] uppercase tracking-widest text-gray-500 font-semibold ml-1" data-i18n="labelWhy">Why do you want to join?</label>
+                <textarea name="why" rows="4" required placeholder="..." class="custom-input w-full px-5 py-4 rounded-2xl text-base resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary w-full py-5 rounded-2xl text-lg shadow-2xl shadow-[#8B9E7C]/20" id="submitBtn">
+                Submit Application
+            </button>
+        </form>
     </section>
 
     <footer class="py-20 text-center border-t border-white/5">
@@ -188,7 +209,11 @@
                 perk3Title: "Viral Assets & Guide",
                 perk3Desc: "Get our private Notion blueprint with high-converting 3-second hooks.",
                 formTitle: "Apply to the Crew",
-                formSubtitle: "Tell us about your reach and why you're a fit."
+                formSubtitle: "Tell us about your reach and why you're a fit.",
+                labelName: "Full Name",
+                labelSocial: "Social Media Link",
+                labelWhy: "Why do you want to join?",
+                submitBtn: "Submit Application"
             },
             es: {
                 navBtn: "Unirme",
@@ -203,7 +228,11 @@
                 perk3Title: "Manual de Viralidad",
                 perk3Desc: "Accede a nuestro Notion privado con ganchos de 3 segundos que revientan el algoritmo.",
                 formTitle: "Solicita tu plaza",
-                formSubtitle: "Cuéntanos sobre tu alcance y por qué encajas."
+                formSubtitle: "Cuéntanos sobre tu alcance y por qué encajas.",
+                labelName: "Nombre completo",
+                labelSocial: "Enlace de Redes Sociales",
+                labelWhy: "¿Por qué quieres unirte?",
+                submitBtn: "Enviar Solicitud"
             },
             fr: {
                 navBtn: "Rejoindre",
@@ -218,12 +247,16 @@
                 perk3Title: "Guide de Viralité Privé",
                 perk3Desc: "Accédez à notre Notion secret contenant les accroches de 3 secondes.",
                 formTitle: "Rejoindre l'équipe",
-                formSubtitle: "Parlez-nous de votre audience."
+                formSubtitle: "Parlez-nous de votre audience.",
+                labelName: "Nom Complet",
+                labelSocial: "Lien Réseaux Sociaux",
+                labelWhy: "Pourquoi voulez-vous nous rejoindre ?",
+                submitBtn: "Envoyer la demande"
             },
             de: {
                 navBtn: "Jetzt Beitreten",
                 heroTitle: 'Hol dir unsere KI kostenlos.<br><span class="accent-gradient">Verdiene 40% wiederkehrend.</span>',
-                heroDesc: "Hilf deinen Followern, ihr Haarwachstum mit der KI-Scanner-App von HairLevel zu analysieren. Wir liefern die Tech, du verdienst das Geld.",
+                heroDesc: "Hilf deinen Followern, ihr Haarwachstum mit der KI-Scanner-App von HairLevel zu analysieren. We power the tech, you cash the rewards.",
                 limitedSlots: "Begrenzte Plätze Verfügbar",
                 perk1Title: "Lebenslanger Premium-Zugriff",
                 perk1Desc: "Komplette Scan-Funktionen basierend auf der Norwood-Skala für immer freigeschaltet.",
@@ -233,7 +266,11 @@
                 perk3Title: "Leitfaden für Viralität",
                 perk3Desc: "Erhalte unseren privaten Notion-Blueprint mit Hooks, die den Algorithmus triggern.",
                 formTitle: "Für die Crew bewerben",
-                formSubtitle: "Erzähl uns von deiner Reichweite."
+                formSubtitle: "Erzähl uns von deiner Reichweite.",
+                labelName: "Vollständiger Name",
+                labelSocial: "Social Media Link",
+                labelWhy: "Warum möchtest du beitreten?",
+                submitBtn: "Bewerbung abschicken"
             },
             it: {
                 navBtn: "Unisciti Ora",
@@ -248,7 +285,11 @@
                 perk3Title: "Manuale di Viralità",
                 perk3Desc: "Accedi al nostro Notion privato con gli hook di 3 secondi che fanno esplodere gli algoritmi.",
                 formTitle: "Candidati alla Crew",
-                formSubtitle: "Raccontaci di te e dei tuoi social."
+                formSubtitle: "Raccontaci di te e dei tuoi social.",
+                labelName: "Nome Completo",
+                labelSocial: "Link Social Media",
+                labelWhy: "Perché vuoi unirti a noi?",
+                submitBtn: "Invia Candidatura"
             }
         };
 
@@ -261,6 +302,19 @@
             });
 
             document.getElementById('heroTitle').innerHTML = translations[lang].heroTitle;
+            document.getElementById('submitBtn').innerText = translations[lang].submitBtn;
+            
+            // Fix input placeholders smoothly
+            const inputs = document.querySelectorAll('.custom-input');
+            if(inputs.length >= 3) {
+                if(lang === 'es') {
+                    inputs[0].placeholder = "Nombre y apellidos";
+                    inputs[2].placeholder = "Cuéntanos...";
+                } else if(lang === 'en') {
+                    inputs[0].placeholder = "John Doe";
+                    inputs[2].placeholder = "...";
+                }
+            }
         }
 
         // Initialize default
