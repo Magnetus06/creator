@@ -58,18 +58,6 @@
             z-index: -1;
         }
 
-        input, textarea {
-            background: var(--surface) !important;
-            border: 1px solid var(--card-border) !important;
-            color: white !important;
-            transition: border-color 0.3s ease;
-        }
-
-        input:focus, textarea:focus {
-            border-color: var(--accent) !important;
-            outline: none;
-        }
-
         .btn-primary {
             background: var(--accent);
             color: var(--obsidian);
@@ -89,7 +77,7 @@
 
     <nav class="ios-blur fixed top-0 w-full z-50 border-b border-white/5 h-16 flex items-center justify-between px-6 lg:px-12">
         <div class="flex items-center gap-3">
-            <img src="https://lh3.google.com/u/0/d/1hjDkvZjpzbeRomDD0stFgKDmJkFXR5qK=s2048?auditContext=thumbnail" alt="HairLevel AI Logo" class="w-9 h-9 rounded-xl object-cover object-top border border-white/10 shadow-md">
+            <img src="https://images.gemini.googleusercontent.com/images/IMG_7784.jpg" alt="HairLevel AI Logo" class="w-9 h-9 rounded-xl object-cover object-top border border-white/10 shadow-md">
             <span class="font-bold tracking-tight text-lg">HairLevel <span class="text-[#8B9E7C] font-light">AI</span></span>
         </div>
         
@@ -105,11 +93,10 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header class="pt-40 pb-20 px-6 text-center max-w-4xl mx-auto">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#8B9E7C]/10 border border-[#8B9E7C]/20 mb-8">
             <span class="w-2 h-2 rounded-full bg-[#8B9E7C] animate-pulse"></span>
-            <span class="text-[11px] uppercase tracking-[0.2em] font-semibold text-[#8B9E7C]">UGC Recruitment 2024</span>
+            <span class="text-[11px] uppercase tracking-[0.2em] font-semibold text-[#8B9E7C]">UGC Recruitment 2026</span>
         </div>
         <h1 class="text-5xl md:text-7xl font-bold tracking-tighter leading-[1.1] mb-8" id="heroTitle">
             Get our AI for Free.<br><span class="accent-gradient">Earn 40% recurring cash.</span>
@@ -123,10 +110,8 @@
         </div>
     </header>
 
-    <!-- Bento Grid -->
     <section class="px-6 py-20 max-w-6xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 lg:grid-rows-2">
-            <!-- Perk 1 -->
             <div class="glass-card p-8 rounded-[32px] md:col-span-2 flex flex-col justify-between min-h-[300px]">
                 <div class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-2xl mb-6">🔒</div>
                 <div>
@@ -136,7 +121,6 @@
                 <div class="mt-8 text-xs font-mono text-[#8B9E7C]" data-i18n="perk1Value">VALUE: $299/YR</div>
             </div>
 
-            <!-- Perk 2 -->
             <div class="glass-card p-8 rounded-[32px] md:row-span-2 flex flex-col justify-between bg-gradient-to-b from-[#1A1A1A] to-[#121212]">
                 <div class="w-12 h-12 rounded-2xl bg-[#8B9E7C]/10 flex items-center justify-center text-2xl mb-6">📈</div>
                 <div>
@@ -149,7 +133,6 @@
                 </div>
             </div>
 
-            <!-- Perk 3 -->
             <div class="glass-card p-8 rounded-[32px] md:col-span-2 flex flex-col justify-between">
                 <div class="flex items-center gap-4">
                     <div class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-2xl">🎬</div>
@@ -162,8 +145,7 @@
         </div>
     </section>
 
-    <!-- Application Form -->
-   <section id="apply" class="px-6 py-24 max-w-2xl mx-auto">
+    <section id="apply" class="px-6 py-24 max-w-2xl mx-auto">
         <div class="text-center mb-10">
             <h2 class="text-4xl font-bold mb-4" data-i18n="formTitle">Apply to the Crew</h2>
             <p class="text-gray-400 font-light max-w-md mx-auto" data-i18n="formSubtitle">Tell us about your reach and why you're a fit.</p>
@@ -178,33 +160,17 @@
                 marginheight="0" 
                 marginwidth="0"
                 class="rounded-[24px]">
-                Cargando formulario...
+                Loading form...
             </iframe>
         </div>
     </section>
 
-            <div class="space-y-2">
-                <label class="text-[10px] uppercase tracking-widest text-gray-500 font-semibold ml-1" data-i18n="labelSocial">Social Media Link</label>
-                <input type="url" name="social" required placeholder="instagram.com/yourhandle" class="w-full px-5 py-4 rounded-2xl text-base">
-            </div>
-
-            <div class="space-y-2">
-                <label class="text-[10px] uppercase tracking-widest text-gray-500 font-semibold ml-1" data-i18n="labelWhy">Why do you want to join?</label>
-                <textarea name="why" rows="4" required placeholder="..." class="w-full px-5 py-4 rounded-2xl text-base resize-none"></textarea>
-            </div>
-
-            <button type="submit" class="btn-primary w-full py-5 rounded-2xl text-lg shadow-2xl shadow-[#8B9E7C]/20" id="submitBtn">
-                Submit Application
-            </button>
-        </form>
-    </section>
-
     <footer class="py-20 text-center border-t border-white/5">
         <div class="flex items-center justify-center gap-2 mb-6 opacity-50">
-            <div class="w-5 h-5 rounded bg-white text-black text-[10px] font-bold flex items-center justify-center">H</div>
+            <img src="https://images.gemini.googleusercontent.com/images/IMG_7784.jpg" alt="HairLevel AI Logo" class="w-6 h-6 rounded-md object-cover object-top border border-white/10">
             <span class="text-sm font-medium tracking-tight">HairLevel AI</span>
         </div>
-        <p class="text-xs text-gray-600">© 2024 HairLevel Labs. All rights reserved.</p>
+        <p class="text-xs text-gray-600">© 2026 HairLevel Labs. All rights reserved.</p>
     </footer>
 
     <script>
@@ -222,11 +188,7 @@
                 perk3Title: "Viral Assets & Guide",
                 perk3Desc: "Get our private Notion blueprint with high-converting 3-second hooks.",
                 formTitle: "Apply to the Crew",
-                formSubtitle: "Tell us about your reach and why you're a fit.",
-                labelName: "Full Name",
-                labelSocial: "Social Media Link",
-                labelWhy: "Why do you want to join?",
-                submitBtn: "Submit Application"
+                formSubtitle: "Tell us about your reach and why you're a fit."
             },
             es: {
                 navBtn: "Unirme",
@@ -241,11 +203,7 @@
                 perk3Title: "Manual de Viralidad",
                 perk3Desc: "Accede a nuestro Notion privado con ganchos de 3 segundos que revientan el algoritmo.",
                 formTitle: "Solicita tu plaza",
-                formSubtitle: "Cuéntanos sobre tu alcance y por qué encajas.",
-                labelName: "Nombre completo",
-                labelSocial: "Enlace de Redes Sociales",
-                labelWhy: "¿Por qué quieres unirte?",
-                submitBtn: "Enviar Solicitud"
+                formSubtitle: "Cuéntanos sobre tu alcance y por qué encajas."
             },
             fr: {
                 navBtn: "Rejoindre",
@@ -260,11 +218,7 @@
                 perk3Title: "Guide de Viralité Privé",
                 perk3Desc: "Accédez à notre Notion secret contenant les accroches de 3 secondes.",
                 formTitle: "Rejoindre l'équipe",
-                formSubtitle: "Parlez-nous de votre audience.",
-                labelName: "Nom Complet",
-                labelSocial: "Lien Réseaux Sociaux",
-                labelWhy: "Pourquoi voulez-vous nous rejoindre ?",
-                submitBtn: "Envoyer la demande"
+                formSubtitle: "Parlez-nous de votre audience."
             },
             de: {
                 navBtn: "Jetzt Beitreten",
@@ -279,11 +233,7 @@
                 perk3Title: "Leitfaden für Viralität",
                 perk3Desc: "Erhalte unseren privaten Notion-Blueprint mit Hooks, die den Algorithmus triggern.",
                 formTitle: "Für die Crew bewerben",
-                formSubtitle: "Erzähl uns von deiner Reichweite.",
-                labelName: "Vollständiger Name",
-                labelSocial: "Social Media Link",
-                labelWhy: "Warum möchtest du beitreten?",
-                submitBtn: "Bewerbung abschicken"
+                formSubtitle: "Erzähl uns von deiner Reichweite."
             },
             it: {
                 navBtn: "Unisciti Ora",
@@ -298,11 +248,7 @@
                 perk3Title: "Manuale di Viralità",
                 perk3Desc: "Accedi al nostro Notion privato con gli hook di 3 secondi che fanno esplodere gli algoritmi.",
                 formTitle: "Candidati alla Crew",
-                formSubtitle: "Raccontaci di te e dei tuoi social.",
-                labelName: "Nome Completo",
-                labelSocial: "Link Social Media",
-                labelWhy: "Perché vuoi unirti a noi?",
-                submitBtn: "Invia Candidatura"
+                formSubtitle: "Raccontaci di te e dei tuoi social."
             }
         };
 
@@ -315,17 +261,6 @@
             });
 
             document.getElementById('heroTitle').innerHTML = translations[lang].heroTitle;
-            document.getElementById('submitBtn').innerText = translations[lang].submitBtn;
-            
-            // Update placeholders
-            const inputs = document.querySelectorAll('input, textarea');
-            if(lang === 'es') {
-                inputs[0].placeholder = "Nombre y apellidos";
-                inputs[2].placeholder = "Cuéntanos...";
-            } else if(lang === 'en') {
-                inputs[0].placeholder = "John Doe";
-                inputs[2].placeholder = "...";
-            }
         }
 
         // Initialize default
