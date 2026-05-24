@@ -70,7 +70,6 @@
             transform: scale(1.02);
         }
 
-        /* Inputs estilizados oscuros */
         .custom-input {
             background: var(--surface);
             border: 1px solid var(--card-border);
@@ -83,6 +82,15 @@
             background: #1c1c1c;
             box-shadow: 0 0 20px rgba(139, 158, 124, 0.1);
         }
+
+        /* Animación suave para la aparición del mensaje de éxito */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-[#8B9E7C] selection:text-black">
@@ -91,7 +99,7 @@
 
     <nav class="ios-blur fixed top-0 w-full z-50 border-b border-white/5 h-16 flex items-center justify-between px-6 lg:px-12">
         <div class="flex items-center gap-3">
-            <img src="https://images.gemini.googleusercontent.com/images/IMG_7784.jpg" alt="HairLevel AI Logo" class="w-9 h-9 rounded-xl object-cover border border-white/10 shadow-md">
+            <img src="https://drive.google.com/file/d/1hjDkvZjpzbeRomDD0stFgKDmJkFXR5qK/view?usp=sharing" alt="HairLevel AI Logo" class="w-9 h-9 rounded-xl object-cover border border-white/10 shadow-md">
             <span class="font-bold tracking-tight text-lg">HairLevel <span class="text-[#8B9E7C] font-light">AI</span></span>
         </div>
         
@@ -159,7 +167,8 @@
         </div>
     </section>
 
-    <section id="apply" class="px-6 py-32 max-w-2xl mx-auto transition-all duration-500">
+    <section id="apply" class="px-6 py-32 max-w-2xl mx-auto">
+        
         <div id="formHeader" class="text-center mb-12">
             <h2 class="text-4xl font-bold mb-4" data-i18n="formTitle">Apply to the Crew</h2>
             <p class="text-gray-400 font-light" data-i18n="formSubtitle">Tell us about your reach and why you're a fit.</p>
@@ -191,200 +200,10 @@
             <h3 class="text-2xl font-bold mb-3" data-i18n="successTitle">Application Received!</h3>
             <p class="text-gray-400 font-light max-w-sm mx-auto" data-i18n="successDesc">Thank you for applying. Our team will review your profile and get in touch via social media soon.</p>
         </div>
+        
     </section>
 
     <footer class="py-20 text-center border-t border-white/5">
         <div class="flex items-center justify-center gap-2 mb-6 opacity-50">
             <img src="https://images.gemini.googleusercontent.com/images/IMG_7784.jpg" alt="HairLevel AI Logo" class="w-6 h-6 rounded-md object-cover border border-white/10">
-            <span class="text-sm font-medium tracking-tight">HairLevel AI</span>
-        </div>
-        <p class="text-xs text-gray-600">© 2026 HairLevel Labs. All rights reserved.</p>
-    </footer>
-
-    <script>
-        // Sistema global de idioma activo
-        let currentLang = 'en';
-
-        const translations = {
-            en: {
-                navBtn: "Join Now",
-                heroTitle: 'Get our AI for Free.<br><span class="accent-gradient">Earn 40% recurring cash.</span>',
-                heroDesc: "Help your audience track their hair growth with HairLevel's neural scanning app. We power the tech, you cash the rewards.",
-                limitedSlots: "Limited Slots Available",
-                perk1Title: "Lifetime Premium Access",
-                perk1Desc: "Full scanning capabilities based on the Norwood scale unlocked forever for you and a friend.",
-                perk1Value: "VALUE: $299/YR",
-                perk2Title: "40% Recurring Revenue",
-                perk2Desc: "Linked directly to RevenueCat. Every single month your followers stay subscribed, you get paid.",
-                perk3Title: "Viral Assets & Guide",
-                perk3Desc: "Get our private Notion blueprint with high-converting 3-second hooks.",
-                formTitle: "Apply to the Crew",
-                formSubtitle: "Tell us about your reach and why you're a fit.",
-                labelName: "Full Name",
-                labelSocial: "Social Media Link",
-                labelWhy: "Why do you want to join?",
-                submitBtn: "Submit Application",
-                btnSending: "Sending...",
-                successTitle: "Application Received!",
-                successDesc: "Thank you for applying. Our team will review your profile and get in touch via social media soon."
-            },
-            es: {
-                navBtn: "Unirme",
-                heroTitle: 'Consigue nuestra IA Gratis.<br><span class="accent-gradient">Gana un 40% recurrente.</span>',
-                heroDesc: "Ayuda a tu audiencia a controlar la salud de su cabello con el escáner neuronal de HairLevel. Nosotros ponemos la tecnología, tú las ganancias.",
-                limitedSlots: "Plazas estrictamente limitadas",
-                perk1Title: "Acceso Premium de por vida",
-                perk1Desc: "Capacidad total de escaneo basado en la escala Norwood desbloqueada para siempre.",
-                perk1Value: "VALOR: 299$/AÑO",
-                perk2Title: "40% Comisión Recurrente",
-                perk2Desc: "Vinculado directo a RevenueCat. Cada mes que tus seguidores sigan suscritos, tú cobras.",
-                perk3Title: "Manual de Viralidad",
-                perk3Desc: "Accede a nuestro Notion privado con ganchos de 3 segundos que revierten el algoritmo.",
-                formTitle: "Solicita tu plaza",
-                formSubtitle: "Cuéntanos sobre tu alcance y por qué encajas.",
-                labelName: "Nombre completo",
-                labelSocial: "Enlace de Redes Sociales",
-                labelWhy: "¿Por qué quieres unirte?",
-                submitBtn: "Enviar Solicitud",
-                btnSending: "Enviando...",
-                successTitle: "¡Solicitud Recibida!",
-                successDesc: "Gracias por postularte. Nuestro equipo revisará tu perfil y se pondrá en contacto contigo muy pronto a través de tus redes."
-            },
-            fr: {
-                navBtn: "Rejoindre",
-                heroTitle: 'Obtenez notre IA Gratuitement.<br><span class="accent-gradient">Gagnez 40% récurrents.</span>',
-                heroDesc: "Aidez votre public à suivre l'évolution de ses cheveux avec l'application d'IA HairLevel. Nous gérons la tech, vous encaissez.",
-                limitedSlots: "Places limitées disponibles",
-                perk1Title: "Accès Premium à Vie",
-                perk1Desc: "Fonctions d'analyse basées sur l'échelle de Norwood débloquées à jamais.",
-                perk1Value: "VALEUR: 299$/AN",
-                perk2Title: "40% de Revenus Récurrents",
-                perk2Desc: "Directement lié à RevenueCat. Chaque mois où vos abonnés restent actifs, vous touchez votre commission.",
-                perk3Title: "Guide de Viralité Privé",
-                perk3Desc: "Accédez à notre Notion secret contenant les accroches de 3 secondes.",
-                formTitle: "Rejoindre l'équipe",
-                formSubtitle: "Parlez-nous de votre audience.",
-                labelName: "Nom Complet",
-                labelSocial: "Lien Réseaux Sociaux",
-                labelWhy: "Pourquoi voulez-vous nous rejoindre ?",
-                submitBtn: "Envoyer la demande",
-                btnSending: "Envoi en cours...",
-                successTitle: "Demande reçue !",
-                successDesc: "Merci pour votre candidature. Notre équipe va analyser votre profil et vous contactera très vite sur sus réseaux."
-            },
-            de: {
-                navBtn: "Jetzt Beitreten",
-                heroTitle: 'Hol dir unsere KI kostenlos.<br><span class="accent-gradient">Verdiene 40% wiederkehrend.</span>',
-                heroDesc: "Hilf deinen Followern, ihr Haarwachstum mit der KI-Scanner-App von HairLevel zu analysieren. Wir liefern die Tech, du verdienst das Geld.",
-                limitedSlots: "Begrenzte Plätze Verfügbar",
-                perk1Title: "Lebenslanger Premium-Zugriff",
-                perk1Desc: "Komplette Scan-Funktionen basierend auf der Norwood-Skala für immer freigeschaltet.",
-                perk1Value: "WERT: 299$/JAHR",
-                perk2Title: "40% Wiederkehrende Provision",
-                perk2Desc: "Direkt mit RevenueCat verknüpft. Jeden Monat, in dem deine Follower abonniert bleiben, wirst du bezahlt.",
-                perk3Title: "Leitfaden für Viralität",
-                perk3Desc: "Erhalte unseren privaten Notion-Blueprint mit Hooks, die den Algorithmus triggern.",
-                formTitle: "Für die Crew bewerben",
-                formSubtitle: "Erzähl uns von deiner Reichweite.",
-                labelName: "Vollständiger Name",
-                labelSocial: "Social Media Link",
-                labelWhy: "Warum möchtest du beitreten?",
-                submitBtn: "Bewerbung abschicken",
-                btnSending: "Wird gesendet...",
-                successTitle: "Bewerbung eingegangen!",
-                successDesc: "Vielen Dank für deine Bewerbung. Unser Team wird dein Profil prüfen und sich in Kürze über deine Social-Media-Kanäle bei dir melden."
-            },
-            it: {
-                navBtn: "Unisciti Ora",
-                heroTitle: 'Ottieni la nostra IA Gratis.<br><span class="accent-gradient">Guadagna il 40% ricorrente.</span>',
-                heroDesc: "Aiuta il tuo pubblico a monitorare i capelli con lo scanner IA di HairLevel. Noi gestiamo la tecnologia, tu incassi i guadagni.",
-                limitedSlots: "Posti Limitati Disponibili",
-                perk1Title: "Accesso Premium a Vita",
-                perk1Desc: "Funzioni di scansione complete basate sulla scala Norwood sbloccate per sempre.",
-                perk1Value: "VALORE: 299$/ANNO",
-                perk2Title: "40% di Commissione Ricorrente",
-                perk2Desc: "Collegato direttamente a RevenueCat. Ogni mese in cui i tuoi follower rimangono iscritti, tu guadagni.",
-                perk3Title: "Manuale di Viralità",
-                perk3Desc: "Accedi al nostro Notion privato con gli hook di 3 secondi che fanno esplodere gli algoritmi.",
-                formTitle: "Candidati alla Crew",
-                formSubtitle: "Raccontaci di te e dei tuoi social.",
-                labelName: "Nome Complet",
-                labelSocial: "Link Social Media",
-                labelWhy: "Perché vuoi unirti a noi?",
-                submitBtn: "Invia Candidatura",
-                btnSending: "Invio...",
-                successTitle: "Candidatura Ricevuta!",
-                successDesc: "Grazie per esserti candidato. Il nostro team esaminerà il tuo profilo e ti contatterà presto sui tuoi canali social."
-            }
-        };
-
-        function updateLanguage(lang) {
-            currentLang = lang;
-            document.querySelectorAll('[data-i18n]').forEach(element => {
-                const key = element.getAttribute('data-i18n');
-                if (translations[lang][key]) {
-                    element.innerHTML = translations[lang][key];
-                }
-            });
-
-            document.getElementById('heroTitle').innerHTML = translations[lang].heroTitle;
-            document.getElementById('submitBtn').innerText = translations[lang].submitBtn;
-            
-            const inputs = document.querySelectorAll('.custom-input');
-            if(inputs.length >= 3) {
-                if(lang === 'es') {
-                    inputs[0].placeholder = "Nombre y apellidos";
-                    inputs[2].placeholder = "Cuéntanos...";
-                } else if(lang === 'en') {
-                    inputs[0].placeholder = "John Doe";
-                    inputs[2].placeholder = "...";
-                }
-            }
-        }
-
-        // CONTROLADOR AJAX INTERNO (INTERCEPCIÓN DEL ENVÍO)
-        document.getElementById('ajaxForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // Evita que la página salte a FormBold
-            
-            const form = this;
-            const submitBtn = document.getElementById('submitBtn');
-            const formHeader = document.getElementById('formHeader');
-            const successMessage = document.getElementById('successMessage');
-            
-            // Ponemos el botón en modo "Enviando..."
-            submitBtn.disabled = true;
-            submitBtn.innerText = translations[currentLang].btnSending;
-            
-            // Estructuramos los datos
-            const formData = new FormData(form);
-            
-            // Enviamos los datos en secreto por detrás
-            fetch('https://formbold.com/s/oPqrM', {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
-                // Ocultamos el formulario y la cabecera limpiamente
-                form.classList.add('hidden');
-                formHeader.classList.add('hidden');
-                
-                // Desplegamos el mensaje de éxito nativo premium
-                successMessage.classList.remove('hidden');
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                // Si falla algo, restauramos el botón por seguridad
-                submitBtn.disabled = false;
-                submitBtn.innerText = translations[currentLang].submitBtn;
-                alert('An error occurred. Please try again.');
-            });
-        });
-
-        // Initialize default
-        updateLanguage('en');
-    </script>
-</body>
-</html>
+            <span class="text-sm font-medium tracking-tight">HairLevel
